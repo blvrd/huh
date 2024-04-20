@@ -107,6 +107,12 @@ func (t *Text) ShowLineNumbers(show bool) *Text {
 	return t
 }
 
+// EndOfBufferCharacter sets the end of buffer character.
+func (t *Text) EndOfBufferCharacter(r rune) *Text {
+	t.textarea.EndOfBufferCharacter = r
+	return t
+}
+
 // Placeholder sets the placeholder of the text field.
 func (t *Text) Placeholder(str string) *Text {
 	t.textarea.Placeholder = str
